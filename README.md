@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Flip Tac Toe!** is an interactive browser-based game that combines the classic Tic Tac Toe game with a card-flipping mechanic. The game features randomly shuffled symbols on cards, sound effects, and a moving background with floating symbols to enhance the gaming experience.
+**Flip Tac Toe!: Fortuity** is an interactive browser-based game that combines the classic Tic Tac Toe mechanics with an innovative card-flipping twist. In this game, players engage with randomly shuffled symbols on cards, and the experience is enhanced by sound effects and a moving background filled with floating symbols. The game embraces the element of chance and surprise, making each match unique and emphasizing the fortuitous nature of every flip. Whether you're strategizing your next move or reveling in the unpredictability of the game, Flip Tac Toe! promises a fresh and exciting take on a timeless classic.
 
 ## Features
 
