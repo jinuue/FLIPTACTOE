@@ -71,7 +71,7 @@ You can customize the game by modifying the following:
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
  
-_Enjoy playing Flip Tac Toe!_[^1] :x: :o: :x: :o:
+Enjoy playing Flip Tac Toe![^1] :x: :o: :x: :o:
 
 
 
