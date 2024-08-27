@@ -34,17 +34,16 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 `cd` flip-tac-toe
 3. Open the `index.html` file in your preferred web browser.
 open `index.html`
-4. _Optional_ - Customize the Game
+4. _Optional_ - Customize the Game:
 If you want to customize the game, you can modify the following files:
-
 **style.css:** To change the visual appearance of the game, including symbols and colors.
 **script.js:** To adjust game logic, sound effects, or animations.
 **sounds/:** Replace existing sound files with your own to customize audio effects.
-5. _Optional_ - Configure Sound Effects
+6. _Optional_ - Configure Sound Effects:
 Ensure that the sound files are correctly placed in the sounds/ directory. You can replace the existing sound files with your own if desired. Make sure the filenames match those specified in script.js.
-6. Verify Compatibility
+7. Verify Compatibility:
 Make sure your web browser is up to date and supports modern JavaScript features like `querySelector`, `addEventListener`, and CSS Grid. The game should run smoothly on most modern browsers, including Chrome, Firefox, Safari, and Edge.
-7. Test the Game
+8. Test the Game:
 After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
 **File Structure**
