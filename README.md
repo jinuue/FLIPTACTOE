@@ -52,7 +52,7 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 + `script.js`: The JavaScript file that handles the game logic, sound effects, and animations.
 + `sounds/`: Directory containing the sound effects used in the game.
 
-### How to Play
+## How to Play
 1. When the game starts, a **_"How To Play"_** popup will appear, explaining the game rules.
 2. Click **_"Play Game"_** to start.
 3. Players take turns clicking on cards to flip them and reveal hidden symbols.
