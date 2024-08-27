@@ -46,8 +46,7 @@ open `index.html`
 **Sound Effects**
 _The game includes the following sound effects:_
 > [!NOTE]
-> sound effects used are copyright-free
-> subject to change
+> sound effects used are copyright-free & subject to change
 
 + Card Flip: Played when a card is flipped.
 + Win: Played when a player wins the game.
