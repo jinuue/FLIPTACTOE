@@ -22,7 +22,7 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 
 **Installation**
 1. Clone the repository to your computer:
-`git clone` (https://github.com/your-username/flip-tac-toe).
+`git clone` [Github](https://github.com/your-username/flip-tac-toe).
 2. Navigate to the project directory:
 `cd` flip-tac-toe
 3. Open the `index.html` file in your preferred web browser.
