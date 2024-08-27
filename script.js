@@ -46,7 +46,6 @@ const shuffleSymbols = () => {
     }
 };
 
-// Flip a card
 const flipCard = (index) => {
     if (!board[index] && gameActive) {
         const card = cards[index];
@@ -61,34 +60,30 @@ const flipCard = (index) => {
     }
 };
 
-// Check win condition
 const checkWin = () => {
-    // Count the number of X's and O's revealed
-    const xCount = board.filter(symbol => symbol === 'X').length;
-    const oCount = board.filter(symbol => symbol === 'O').length;
+    const winningPatterns = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
 
-    // Check if either player has revealed 3 of their symbol
-    if (xCount === 3) {
-        setTimeout(() => {
-            msgRef.innerHTML = "Player X Wins!";
-            popupRef.classList.remove('hide');
-            playWinSound(); // Play win sound
-            gameActive = false;
-        }, 100); // Delay to match card flip duration
-        return;
+    for (const [a, b, c] of winningPatterns) {
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            setTimeout(() => {
+                msgRef.innerHTML = `Player ${board[a]} Wins!`;
+                popupRef.classList.remove('hide');
+                playWinSound(); // Play win sound
+                gameActive = false;
+            }, 100); // Delay to match card flip duration
+            return;
+        }
     }
 
-    if (oCount === 3) {
-        setTimeout(() => {
-            msgRef.innerHTML = "Player O Wins!";
-            popupRef.classList.remove('hide');
-            playWinSound(); // Play win sound
-            gameActive = false;
-        }, 100); // Delay to match card flip duration
-        return;
-    }
-
-    // Check for draw condition
     if (board.every(cell => cell)) {
         setTimeout(() => {
             msgRef.innerHTML = "It's a Draw!";
@@ -99,7 +94,6 @@ const checkWin = () => {
     }
 };
 
-// Reset the game
 const resetGame = () => {
     board.fill(null);
     shuffleSymbols(); // Shuffle symbols for the new game
