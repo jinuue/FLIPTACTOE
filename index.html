@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <!-- Google Fonts -->
+    <title>Flip Tac Toe</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="wrapper">
-       <div class="container">
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-           <button class="button-option"></button>
-       </div>
-       <button id="restart">Restart</button>
-   </div>
-   <div class="popup hide">
-       <p id="message">Sample Message</p>
-       <button id="new-game">New Game</button>
-   </div>
-   
-    <!-- Script -->
+    <div class="wrapper">
+        <div class="container">
+            <div class="card" data-index="0">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="1">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="3">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="4">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="5">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="6">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="7">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-index="8">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <button id="restart">Restart</button>
+    </div>
+    <div class="popup hide">
+        <p id="message">Sample Message</p>
+        <button id="new-game">New Game</button>
+    </div>
+
+    <audio id="flip-sound" src="sounds/flip.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="draw-sound" src="sounds/draw.mp3"></audio>
+    <audio id="restart-sound" src="sounds/restart.mp3"></audio>
+    <audio id="newgame-sound" src="sounds/newgame.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>

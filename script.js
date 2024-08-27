@@ -1,109 +1,121 @@
-let btnRef = document.querySelectorAll(".button-option");
-let popupRef = document.querySelector(".popup");
-let newgameBtn = document.getElementById("new-game");
-let restartBtn = document.getElementById("restart");
-let msgRef = document.getElementById("message");
+// Get audio elements
+const flipSound = document.getElementById('flip-sound');
+const winSound = document.getElementById('win-sound');
+const drawSound = document.getElementById('draw-sound');
+const restartSound = document.getElementById('restart-sound');
+const newgameSound = document.getElementById('newgame-sound');
 
-//Winning Pattern Array
-let winningPattern = [
-  [0, 1, 2],
-  [0, 3, 6],
-  [2, 5, 8],
-  [6, 7, 8],
-  [3, 4, 5],
-  [1, 4, 7],
-  [0, 4, 8],
-  [2, 4, 6],
-];
-//Player 'X' plays first
-let xTurn = true;
-let count = 0;
-
-//Disable All Buttons
-const disableButtons = () => {
-  btnRef.forEach((element) => (element.disabled = true));
-  //enable popup
-  popupRef.classList.remove("hide");
+// Play sound functions
+const playFlipSound = () => {
+  flipSound.play();
 };
 
-//Enable all buttons (For New Game and Restart)
-const enableButtons = () => {
-  btnRef.forEach((element) => {
-    element.innerText = "";
-    element.disabled = false;
-  });
-  //disable popup
-  popupRef.classList.add("hide");
+const playWinSound = () => {
+  winSound.play();
 };
 
-//This function is executed when a player wins
-const winFunction = (letter) => {
-  disableButtons(); 
-  if (letter == "X") {
-    msgRef.innerHTML = "&#x1F389; <br> ;X' Wins";
-  } else {
-    msgRef.innerHTML = "&#x1F389; <br> 'O' Wins";
-  }
+const playDrawSound = () => {
+  drawSound.play();
 };
 
-//Function for draw
-const drawFunction = () => {
-  disableButtons();
-  msgRef.innerHTML = "&#x1F60E; <br> It's a Draw";
+const playRestartSound = () => {
+  restartSound.play();
 };
 
-//New Game
-newgameBtn.addEventListener("click", () => {
-  count = 0;
-  enableButtons();
-});
-restartBtn.addEventListener("click", () => {
-  count = 0;
-  enableButtons();
-});
+const playNewGameSound = () => {
+  newgameSound.play();
+};
 
-//Win Logic
-const winChecker = () => {
-  //Loop through all win patterns
-  for (let i of winningPattern) {
-    let [element1, element2, element3] = [
-      btnRef[i[0]].innerText,
-      btnRef[i[1]].innerText,
-      btnRef[i[2]].innerText,
+// Get references to HTML elements
+const cards = document.querySelectorAll('.card');
+const restartBtn = document.getElementById('restart');
+const popupRef = document.querySelector('.popup');
+const newgameBtn = document.getElementById('new-game');
+const msgRef = document.getElementById('message');
+
+let board = Array(9).fill(null);
+let gameActive = true; // To prevent interactions after game over
+let symbolsArray = []; // Array to store shuffled X's and O's
+
+// Function to shuffle the array of X's and O's
+const shuffleSymbols = () => {
+    symbolsArray = ['X', 'X', 'X', 'X', 'X', 'O', 'O', 'O', 'O'];
+    for (let i = symbolsArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [symbolsArray[i], symbolsArray[j]] = [symbolsArray[j], symbolsArray[i]];
+    }
+};
+
+const flipCard = (index) => {
+    if (!board[index] && gameActive) {
+        const card = cards[index];
+        card.classList.add('flipped');
+        playFlipSound(); // Play flip sound
+        setTimeout(() => {
+            const symbol = symbolsArray[index];
+            card.querySelector('.back').innerText = symbol;
+            board[index] = symbol;
+            checkWin();
+        }, 300); // Delay to match card flip duration
+    }
+};
+
+const checkWin = () => {
+    const winningPatterns = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
     ];
-    //Check if elements are filled
-    //If 3 empty elements are same and would give win as would
-    if (element1 != "" && (element2 != "") & (element3 != "")) {
-      if (element1 == element2 && element2 == element3) {
-        //If all 3 buttons have same values then pass the value to winFunction
-        winFunction(element1);
-      }
+
+    for (const [a, b, c] of winningPatterns) {
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            setTimeout(() => {
+                msgRef.innerHTML = `Player ${board[a]} Wins!`;
+                popupRef.classList.remove('hide');
+                playWinSound(); // Play win sound
+                gameActive = false;
+            }, 100); // Delay to match card flip duration
+            return;
+        }
     }
-  }
+
+    if (board.every(cell => cell)) {
+        setTimeout(() => {
+            msgRef.innerHTML = "It's a Draw!";
+            popupRef.classList.remove('hide');
+            playDrawSound(); // Play draw sound
+            gameActive = false;
+        }, 500); // Delay to match card flip duration
+    }
 };
 
-//Display X/O on click
-btnRef.forEach((element) => {
-  element.addEventListener("click", () => {
-    if (xTurn) {
-      xTurn = false;
-      //Display X
-      element.innerText = "X";
-      element.disabled = true;
-    } else {
-      xTurn = true;
-      //Display Y
-      element.innerText = "O";
-      element.disabled = true;
-    }
-    //Increment count on each click
-    count += 1;
-    if (count == 9) {
-      drawFunction();
-    }
-    //Check for win on every click
-    winChecker();
-  });
+const resetGame = () => {
+    board.fill(null);
+    shuffleSymbols(); // Shuffle symbols for the new game
+    cards.forEach(card => {
+        card.classList.remove('flipped');
+        card.querySelector('.back').innerText = '';
+    });
+    gameActive = true;
+    popupRef.classList.add('hide');
+    playRestartSound(); // Play restart sound
+};
+
+// Initialize the game
+shuffleSymbols();
+
+cards.forEach((card, index) => {
+    card.addEventListener('click', () => flipCard(index));
 });
-//Enable Buttons and disable popup on page load
-window.onload = enableButtons;
+
+restartBtn.addEventListener('click', () => resetGame());
+
+newgameBtn.addEventListener('click', () => {
+    resetGame();
+    playNewGameSound();
+});
