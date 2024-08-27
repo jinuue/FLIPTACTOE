@@ -36,7 +36,7 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 - open `index.html`
 4. _(Optional)_ Customize the Game:
 + If you want to customize the game, you can modify the following files:
- + `style.css`: To change the visual appearance of the game, including symbols and colors. Adjust the `@keyframes float` animation in `style.css` to change the movement and behavior of the floating symbols.
+ + `style.css`: To change the visual appearance of the game, including symbols and colors. Adjust the `@keyframes float` animation to change the movement and behavior of the floating symbols.
  + `script.js`: To adjust game logic, sound effects, or animations.
  + `sounds/`: Replace existing sound files with your own to customize audio effects.
 6. _(Optional)_ Configure Sound Effects:
