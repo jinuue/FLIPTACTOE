@@ -1,4 +1,4 @@
-# Flip Tac Toe!
+# FLIP TAC TOE!: Fortuity
 
 ## Overview
 
