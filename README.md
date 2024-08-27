@@ -73,7 +73,7 @@ _The game includes the following sound effects:_
 + New Game: Played when starting a new game.
 
 **Floating Symbols**
-The background features floating X's and O's that move from the bottom to the top of the screen, adding a dynamic element to the visual design.
++ The background features floating X's and O's that move from the bottom to the top of the screen, adding a dynamic element to the visual design.
 
 ## Customization
 You can customize the game by modifying the following:
