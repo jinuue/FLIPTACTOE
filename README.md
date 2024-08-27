@@ -20,6 +20,13 @@
 **Prerequisites**
 To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
 
+**Technical Dependencies**
+
+**HTML5:** For structuring the game's content.
+**CSS3:** For styling the game's layout and animations.
+**JavaScript ES6+:** For implementing game logic and interactivity.
+**Audio Support:** Ensure your browser supports HTML5 audio elements for sound effects.
+
 **Installation**
 1. Clone the repository to your computer:
 `git clone` [https://github.com/your-username/flip-tac-toe](url).
