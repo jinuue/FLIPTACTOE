@@ -7,7 +7,20 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #8326df, #41245f);
+  margin: 0;
+  background: #161616;
+  overflow: hidden; /*prevent scrollbars */
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /*place behind all other elements */
 }
 
 .wrapper {
@@ -17,19 +30,26 @@ body {
   left: 50%;
 }
 
+.turn-indicator {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .container {
   width: 70vmin;
   height: 70vmin;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2vmin;
+  gap: 0.5vmin;
 }
 
 .card {
   background: #ffffff;
   height: 22vmin;
   width: 22vmin;
-  border-radius: 8px;
+  border-radius: 5px;
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -37,9 +57,9 @@ body {
 }
 
 .card:hover {
-  cursor: pointer;
-  border: 2px solid;
+  border: 7px solid;
   border-color: #c28426;
+  transition: 0.2s;
 }
 
 .card.flipped {
@@ -55,7 +75,7 @@ body {
 }
 
 .card .front {
-  background: #0a0027;
+  background: #ffffff;
 }
 
 .card .back {
@@ -64,31 +84,30 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 12vmin;
-  color: #eae5f5;
+  color: #ffffff;
   transform: rotateY(180deg);
 }
 
-#restart {
+#reset-game {
   font-size: 1.3em;
-  padding: 1em;
-  border-radius: 8px;
-  background-color: #0a0027;
-  color: #eae5f5;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #c28426;
+  color: #161616;
   border: none;
   position: relative;
-  margin: 1.5em auto 0 auto;
-  display: block;
+  margin-top: 10px;
 }
 
-#restart:hover {
+#reset-game:hover {
   cursor: pointer;
   background-color: #c28426;
-  color: #0a0027;
+  color: #ffffff;
   transition: 0.5s;
 }
 
 .popup {
-  background: linear-gradient(135deg, #8326df, #41245f);
+  background:#161616;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -104,8 +123,8 @@ body {
 #new-game {
   font-size: 0.6em;
   padding: 0.5em 1em;
-  background-color: #0a0027;
-  color: #eae5f5;
+  background-color: #c28426;
+  color: #161616;
   border-radius: 0.2em;
   border: none;
 }
@@ -113,9 +132,8 @@ body {
 #new-game:hover {
   cursor: pointer;
   background-color: #c28426;
-  color: #0a0027;
+  color: #ffffff;
   transition: 0.5s;
-
 }
 
 #message {
@@ -126,4 +144,94 @@ body {
 
 .popup.hide {
   display: none;
+}
+
+.info-popup {
+  display: flex;
+  text-align: justify;
+  background: #161616;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-popup h1 {
+  color: #c28426;
+  font-size: 3em;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.info-popup h2 {
+  color: #c28426;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.info-popup p {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 1em; /* Add some padding for better readability */
+}
+
+.info-btn {
+  color: #ffffff;
+  font-size: 4em;
+}
+
+#play-game {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  background-color: #c28426;
+  color: #161616;
+  border-radius: 0.2em;
+  border: none;
+  margin-top: 30px;
+}
+
+#play-game:hover {
+  cursor: pointer;
+  background-color: #c28426;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.info-popup.hide {
+  display: none;
+}
+
+.score-tracker {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.score {
+  text-align: center;
+}
+
+.floating-symbol {
+  position: absolute;
+  top: 100%;
+  font-size: 2rem;
+  color: #c28426;
+  opacity: 25%;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0) rotate(0deg);
+  }
+  /* 50% {
+    transform: translateY(-10vh) rotate(180deg)
+  } */
+  100% {
+      transform: translateY(-150vh) rotate(180deg);
+  }
 }

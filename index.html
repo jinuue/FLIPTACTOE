@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flip Tac Toe</title>
+    <title>Flip Tac Toe!</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
+        <div class="turn-indicator">
+            Player X's turn
+        </div>
+
+        <div class="score-tracker">
+            <div class="score">Player X: <span id="x-score">0</span></div>
+            <div class="score">Player O: <span id="o-score">0</span></div>
+            <div class="score">Draws: <span id="draw-score">0</span></div>
+        </div>
+        
         <div class="container">
             <div class="card" data-index="0">
                 <div class="front"></div>
@@ -46,12 +56,31 @@
                 <div class="back"></div>
             </div>
         </div>
-        <button id="restart">Restart</button>
+        <button id="reset-game">Reset Game</button>
     </div>
+
     <div class="popup hide">
         <p id="message">Sample Message</p>
         <button id="new-game">New Game</button>
     </div>
+
+    <div class="info-popup">
+        <h1>FLIP TAC TOE!</h1>
+        <h2>How To Play:</h2>
+        <p>Players take turns flipping cards.</p>
+        <p>Symbols are randomly placed on the cards at the start of the game.</p>
+        <p>Click on a card to flip and reveal its symbol. Once revealed, the symbol stays visible.</p>
+        <p>If you accidentally reveal the opponent's symbol, you cannot undo the move, and the game will continue.</p>
+        <p>Win by lining up three of the same symbols in a row, column, or diagonal.</p>
+        <p>If all cards are revealed and no one has three in a line, the game is a draw.</p>
+        
+        
+        <button id="play-game">Play Game</button>
+    </div>
+
+    <div class="background">
+    </div>
+    
 
     <audio id="flip-sound" src="sounds/flip.mp3"></audio>
     <audio id="win-sound" src="sounds/win.mp3"></audio>
