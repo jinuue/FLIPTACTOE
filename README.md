@@ -47,22 +47,21 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 - After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
 ### File Structure
-+ **index.html:** The main HTML file that contains the structure of the game.
-+ **style.css:** The CSS file responsible for the visual styling of the game.
-+ **script.js:** The JavaScript file that handles the game logic, sound effects, and animations.
-+ **sounds/:** Directory containing the sound effects used in the game.
++ `index.html`: The main HTML file that contains the structure of the game.
++ `style.css`: The CSS file responsible for the visual styling of the game.
++ `script.js`: The JavaScript file that handles the game logic, sound effects, and animations.
++ `sounds/`: Directory containing the sound effects used in the game.
 
 ### How to Play
-1. When the game starts, a "How To Play" popup will appear, explaining the game rules.
-2. Click "Play Game" to start.
+1. When the game starts, a **_"How To Play"_** popup will appear, explaining the game rules.
+2. Click **_"Play Game"_** to start.
 3. Players take turns clicking on cards to flip them and reveal hidden symbols.
 4. The game tracks whose turn it is and displays this at the top.
 5. Win by aligning three of the same symbols in a row, column, or diagonal.
 6. The game automatically detects when a player wins or when the game is a draw, displaying a popup with the result.
-7. Click "New Game" to start a new round or "Reset Game" to reset all scores and start fresh.
+7. Click **_"New Game"_** to start a new round or "Reset Game" to reset all scores and start fresh.
 
 ### Sound Effects
-_The game includes the following sound effects:_
 > [!NOTE]
 > sound effects used are copyright-free & subject to change
 
