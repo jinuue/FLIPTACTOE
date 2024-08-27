@@ -17,17 +17,17 @@
 
 ## Getting Started
 
-**Prerequisites**
-+ To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
+### Prerequisites
+To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
 
-**Technical Dependencies**
+## Technical Dependencies
 
 + **HTML5:** For structuring the game's content.
 + **CSS3:** For styling the game's layout and animations.
 + **JavaScript ES6+:** For implementing game logic and interactivity.
 + **Audio Support:** Ensure your browser supports HTML5 audio elements for sound effects.
 
-**Setup Instructions**
+## Setup Instructions
 1. Clone the repository to your computer:
 - `git clone` [https://github.com/your-username/flip-tac-toe](url).
 2. Navigate to the project directory:
@@ -46,13 +46,13 @@
 8. Test the Game:
 - After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
-**File Structure**
+### File Structure
 + **index.html:** The main HTML file that contains the structure of the game.
 + **style.css:** The CSS file responsible for the visual styling of the game.
 + **script.js:** The JavaScript file that handles the game logic, sound effects, and animations.
 + **sounds/:** Directory containing the sound effects used in the game.
 
-**How to Play**
+### How to Play
 1. When the game starts, a "How To Play" popup will appear, explaining the game rules.
 2. Click "Play Game" to start.
 3. Players take turns clicking on cards to flip them and reveal hidden symbols.
@@ -61,7 +61,7 @@
 6. The game automatically detects when a player wins or when the game is a draw, displaying a popup with the result.
 7. Click "New Game" to start a new round or "Reset Game" to reset all scores and start fresh.
 
-**Sound Effects**
+### Sound Effects
 _The game includes the following sound effects:_
 > [!NOTE]
 > sound effects used are copyright-free & subject to change
@@ -72,8 +72,8 @@ _The game includes the following sound effects:_
 + Restart: Played when the game is reset.
 + New Game: Played when starting a new game.
 
-**Floating Symbols**
-+ The background features floating X's and O's that move from the bottom to the top of the screen, adding a dynamic element to the visual design.
+### Floating Symbols
+The background features floating X's and O's that move from the bottom to the top of the screen, adding a dynamic element to the visual design.
 
 ## Customization
 You can customize the game by modifying the following:
