@@ -18,7 +18,7 @@
 ## Getting Started
 
 **Prerequisites**
-To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
++ To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
 
 **Technical Dependencies**
 
