@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   margin: 0;
-  background: #161616;
+  background: #131515;
   overflow: hidden; /*prevent scrollbars */
   position: relative;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 .card .front {
-  background: #c28426;
+  background: #823200;
 }
 
 .card .back {
@@ -85,7 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 12vmin;
-  color: #c28426;
+  color: #9B3D12;
   transform: rotateY(180deg);
 }
 
@@ -94,7 +94,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   background-color: #161616;
-  border: solid 2px #c28426;
+  border: solid 2px #823200;
   color: #ffffff;
   /* border: none; */
   position: relative;
@@ -125,16 +125,16 @@ body {
 #new-game {
   font-size: 0.6em;
   padding: 0.5em 1em;
-  background-color: #c28426;
-  color: #161616;
+  background-color: #9B3D12;
+  color: #ffffff;
   border-radius: 0.2em;
-  border: none;
+  border: solid 5px #9B3D12;
 }
 
 #new-game:hover {
   cursor: pointer;
-  background-color: #c28426;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #161616;
   transition: 0.5s;
 }
 
@@ -161,14 +161,14 @@ body {
 }
 
 .info-popup h1 {
-  color: #c28426;
+  color: #9B3D12;
   font-size: 3em;
   margin-top: 10px;
   margin-bottom: 50px;
 }
 
 .info-popup h2 {
-  color: #c28426;
+  color: #9B3D12;
   font-size: 2em;
   margin-bottom: 15px;
 }
@@ -176,7 +176,7 @@ body {
 .info-popup p {
   color: #ffffff;
   font-size: 15px;
-  padding: 10px 1em; /* Add some padding for better readability */
+  padding: 10px 1em;
 }
 
 .info-btn {
@@ -187,17 +187,17 @@ body {
 #play-game {
   font-size: 1em;
   padding: 0.5em 1em;
-  background-color: #c28426;
-  color: #161616;
-  border-radius: 0.2em;
-  border: none;
+  background-color: #161616;
+  color: #ffffff;
+  border-radius: 6px;
+  border: solid 2px #9B3D12;
   margin-top: 30px;
 }
 
 #play-game:hover {
   cursor: pointer;
-  background-color: #c28426;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #161616;
   transition: 0.5s;
 }
 
@@ -217,12 +217,13 @@ body {
   text-align: center;
 }
 
+/* for background animation */
 .floating-symbol {
   position: absolute;
   top: 100%;
   font-size: 2rem;
-  color: #c28426;
-  opacity: 25%;
+  color: #ffffff;
+  opacity: 10%;
   animation: float linear infinite;
 }
 
@@ -230,9 +231,6 @@ body {
   0% {
       transform: translateY(0) rotate(0deg);
   }
-  /* 50% {
-    transform: translateY(-10vh) rotate(180deg)
-  } */
   100% {
       transform: translateY(-150vh) rotate(180deg);
   }

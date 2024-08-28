@@ -41,7 +41,9 @@ let currentPlayer = 'X'; // Track the current player
 
 // Function to shuffle the array of X's and O's
 const shuffleSymbols = () => {
-    symbolsArray = ['X', 'X', 'X', 'X', 'X', 'O', 'O', 'O', 'O'];
+    const numX = 4; // Number of X's
+    const numO = 4; // Number of O's
+    symbolsArray = Array(numX).fill('X').concat(Array(numO).fill('O')).concat([' ']); // Adding a neutral card for the 9th position
     for (let i = symbolsArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [symbolsArray[i], symbolsArray[j]] = [symbolsArray[j], symbolsArray[i]];
