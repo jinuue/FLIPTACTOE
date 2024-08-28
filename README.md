@@ -1,13 +1,13 @@
-# FLIP TAC TOE!: FORTUITY
+# FLIP TAC TOE: FORTUITY
 
 ## Overview
 
-**Flip Tac Toe!: Fortuity** is an interactive browser-based game that combines the classic Tic Tac Toe mechanics with an innovative card-flipping twist. In this game, players engage with randomly shuffled symbols on cards, and the experience is enhanced by sound effects and a moving background filled with floating symbols. The game embraces the element of chance and surprise, making each match unique and emphasizing the fortuitous nature of every flip. Whether you're strategizing your next move or reveling in the unpredictability of the game, Flip Tac Toe! promises a fresh and exciting take on a timeless classic.
+**Flip Tac Toe: Fortuity** is an interactive browser-based game that combines the classic Tic Tac Toe game with a card-flipping mechanic. The game features randomly shuffled symbols on cards, sound effects, a moving background with floating symbols, and a neutral card to enhance the gaming experience.
 
 ## Features
 
 + **Interactive Gameplay:** Players take turns flipping cards to reveal hidden symbols.
-+ **Random Symbol Distribution:** Symbols are randomly placed on the cards at the start of each game.
++ **Random Symbol Distribution:** Symbols are randomly placed on the cards at the start of each game, including one neutral card to ensure fair gameplay.
 + **Winning Conditions:** Align three identical symbols in a row, column, or diagonal to win.
 + **Score Tracking:** Tracks the number of wins for Player X, Player O, and the number of draws.
 + **Sounds Effects:** Includes sound effects for card flips, winning, drawing, restarting, and starting a new game.
@@ -18,7 +18,7 @@
 ## Getting Started
 
 ### Prerequisites
-To run Flip Tac Toe!, you only need a modern web browser. No additional software or libraries are required.
+To run Flip Tac Toe, you only need a modern web browser. No additional software or libraries are required.
 
 ### Technical Dependencies
 
@@ -58,8 +58,9 @@ To run Flip Tac Toe!, you only need a modern web browser. No additional software
 3. Players take turns clicking on cards to flip them and reveal hidden symbols.
 4. The game tracks whose turn it is and displays this at the top.
 5. Win by aligning three of the same symbols in a row, column, or diagonal.
-6. The game automatically detects when a player wins or when the game is a draw, displaying a popup with the result.
-7. Click **_"New Game"_** to start a new round or "Reset Game" to reset all scores and start fresh.
+6. Watch out for the neutral card, which neither player can claim, but it ensures fairness in symbol distribution.
+7. The game automatically detects when a player wins or when the game is a draw, displaying a popup with the result.
+8. Click **_"New Game"_** to start a new round or "Reset Game" to reset all scores and start fresh.
 
 ### Sound Effects
 > [!NOTE]
