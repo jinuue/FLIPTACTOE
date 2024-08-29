@@ -15,11 +15,6 @@
 + **Animated Background:** Includes floating X's and O's in the background for added visual interest.
 + **How To Play Popup:** Instructions are provided to players at the beginning of the game.
 
-## Getting Started
-
-### Prerequisites
-To run Flip Tac Toe, you only need a modern web browser. No additional software or libraries are required.
-
 ### Technical Dependencies
 
 + **HTML5:** For structuring the game's content.
@@ -46,11 +41,8 @@ To run Flip Tac Toe, you only need a modern web browser. No additional software 
 8. Test the Game:
 - After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
-### File Structure
-+ `index.html`: The main HTML file that contains the structure of the game.
-+ `style.css`: The CSS file responsible for the visual styling of the game.
-+ `script.js`: The JavaScript file that handles the game logic, sound effects, and animations.
-+ `sounds/`: Directory containing the sound effects used in the game.
+> [!NOTE]
+> To start playing the game directly, click on this link: [https://fliptactoe.netlify.app/](url)
 
 ## How to Play
 1. When the game starts, a **_"How To Play"_** popup will appear, explaining the game rules.
@@ -62,19 +54,6 @@ To run Flip Tac Toe, you only need a modern web browser. No additional software 
 7. The game automatically detects when a player wins or when the game is a draw, displaying a popup with the result.
 8. Click **_"New Game"_** to start a new round or "Reset Game" to reset all scores and start fresh.
 
-### Sound Effects
-> [!NOTE]
-> sound effects used are copyright-free & subject to change
-
-+ Card Flip: Played when a card is flipped.
-+ Win: Played when a player wins the game.
-+ Draw: Played when the game ends in a draw.
-+ Restart: Played when the game is reset.
-+ New Game: Played when starting a new game.
-
-### Floating Symbols
-The background features floating X's and O's that move from the bottom to the top of the screen, adding a dynamic element to the visual design.
-
 ## Compatibility
 **Browsers:** Compatible with the latest versions of Chrome, Firefox, Safari, and Edge.
 **Operating Systems:** Works on Windows, macOS, and Linux.
@@ -83,6 +62,8 @@ The background features floating X's and O's that move from the bottom to the to
 ## Troubleshooting
 + If the game does not start, ensure that your browser supports modern JavaScript features such as `querySelector`, `addEventListener`, and CSS Grid.
 + For sound issues, ensure that your browser is not blocking audio playback or that the sound files are correctly placed in the `sounds/` directory.
+> [!NOTE]
+> sound effects used are copyright-free
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs or feature requests.
