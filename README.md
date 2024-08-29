@@ -24,7 +24,7 @@
 
 ### :memo: Setup Instructions
 1. Clone this repository:
-- `git clone` https://github.com/your-username/flip-tac-toe.
+- `git clone` https://github.com/jinuue/FLIPTACTOE-FORTUITY.git.
 2. Navigate to the project directory:
 - `cd` flip-tac-toe
 3. Open the `index.html` file in your preferred web browser.
