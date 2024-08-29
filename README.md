@@ -23,26 +23,17 @@
 + **Audio Support:** Ensure your browser supports HTML5 audio elements for sound effects.
 
 ### Setup Instructions
-1. Clone the repository to your computer:
+1. Clone this repository:
 - `git clone` [https://github.com/your-username/flip-tac-toe](url).
 2. Navigate to the project directory:
 - `cd` flip-tac-toe
 3. Open the `index.html` file in your preferred web browser.
 - open `index.html`
-4. _(Optional)_ Customize the Game:
-+ If you want to customize the game, you can modify the following files:
- + `style.css`: To change the visual appearance of the game, including symbols and colors. Adjust the `@keyframes float` animation to change the movement and behavior of the floating symbols.
- + `script.js`: To adjust game logic, sound effects, or animations.
- + `sounds/`: Replace existing sound files with your own to customize audio effects.
-6. _(Optional)_ Configure Sound Effects:
-- Ensure that the sound files are correctly placed in the `sounds/` directory. You can replace the existing sound files with your own if desired. Make sure the filenames match those specified in `script.js`.
-7. Verify Compatibility:
-- Make sure your web browser is up to date and supports modern JavaScript features like `querySelector`, `addEventListener`, and CSS Grid. The game should run smoothly on most modern browsers, including Chrome, Firefox, Safari, and Edge.
-8. Test the Game:
+4. Test the Game:
 - After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
 > [!NOTE]
-> To start playing the game directly, click on this link: [https://fliptactoe.netlify.app/](url)
+> If you want to jump straight into the game, use this link: [https://fliptactoe.netlify.app/](url)
 
 ## How to Play
 1. When the game starts, a **_"How To Play"_** popup will appear, explaining the game rules.
