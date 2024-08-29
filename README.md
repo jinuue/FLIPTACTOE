@@ -33,7 +33,7 @@
 - After setting up, test the game to ensure that it runs as expected. Verify that all interactive elements, sound effects, and animations work correctly.
 
 > [!NOTE]
-> If you want to jump straight into the game, use this link: [https://fliptactoe.netlify.app/]
+> If you want to jump straight into the game, use this link: (Flip Tac Toe)[https://fliptactoe.netlify.app/]
 
 ## How to Play
 1. When the game starts, a **_"How To Play"_** popup will appear, explaining the game rules.
