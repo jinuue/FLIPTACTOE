@@ -66,6 +66,7 @@ const flipCard = (index) => {
         const card = cards[index];
         card.classList.add('flipped');
         playFlipSound();
+        playFlipSound();
         setTimeout(() => {
             const symbol = symbolsArray[index];
             card.querySelector('.back').innerText = symbol;
@@ -94,6 +95,7 @@ const checkWin = () => {
                 msgRef.innerHTML = `Player ${board[a]} Wins!`;
                 popupRef.classList.remove('hide');
                 playWinSound();
+                playWinSound();
                 gameActive = false;
 
                 if (board[a] === 'X') {
@@ -112,9 +114,12 @@ const checkWin = () => {
             msgRef.innerHTML = "It's a Draw!";
             popupRef.classList.remove('hide');
             playDrawSound();
+            playDrawSound();
             gameActive = false;
 
             drawScore++;
+            updateScores(); 
+        }, 500); 
             updateScores(); 
         }, 500); 
     }
@@ -123,6 +128,7 @@ const checkWin = () => {
 // Reset game
 const resetGame = () => {
     board.fill(null);
+    shuffleSymbols(); 
     shuffleSymbols(); 
     cards.forEach(card => {
         card.classList.remove('flipped');
@@ -146,16 +152,20 @@ const resetGame = () => {
       updateScores();
       resetGame();
       playRestartSound(); 
+      playRestartSound(); 
   });
   
   newgameBtn.addEventListener('click', () => {
       resetGame();
+      playNewGameSound(); 
       playNewGameSound(); 
   });
   
 // Start game when "play game" btn is clicked
   playGameBtn.addEventListener('click', () => {
   infoPopup.classList.add('hide');
+      initGame(); 
+      playNewGameSound(); 
       initGame(); 
       playNewGameSound(); 
 });
@@ -173,6 +183,7 @@ const resetGame = () => {
           background.appendChild(symbol);
       }
   };
+
 
   const initGame = () => {
       shuffleSymbols();
