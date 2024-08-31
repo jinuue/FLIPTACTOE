@@ -120,8 +120,6 @@ const checkWin = () => {
             drawScore++;
             updateScores(); 
         }, 500); 
-            updateScores(); 
-        }, 500); 
     }
 };
 
